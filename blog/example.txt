@@ -1,0 +1,81 @@
+<?php
+
+/**
+ * candidate actions.
+ *
+ * @package    election
+ * @subpackage candidate
+ * @author     Amir Ali Akbari
+ * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ */
+class candidateActions extends sfActions
+{
+	public function executeIndex(sfWebRequest $request){
+		$this->u_id = $request->getParameter("university", -1);
+		$this->unis = Doctrine_Query::create()
+		->select('u.id, u.name')
+		->from('university u')
+		->execute();
+
+		$this->cands = Doctrine_Query::create()
+		->select('c.id, s.first_name, s.last_name, s.student_number')
+		->from('candidate c')
+		->innerJoin('c.Student s')
+		->where('s.university_id=?', $this->u_id)
+		->execute();
+	}
+
+	public function executeAdd(sfWebRequest $request){
+		$std_num = $request->getParameter("student_number", 0);
+		$student = Doctrine::getTable('student')->findOneByStudentNumber($std_num);
+		$id = $student->id;
+
+		$cnt = Doctrine_Query::create()
+		->select('Count(*) AS cnt')
+		->from('candidate')
+		->where("student_id=?", $id)
+		->fetchOne()->cnt;
+		if ($cnt != '0')
+			return $this->renderText("Ù‚Ø¨Ù„Ø§ Ø§Ø¶Ø§ÙÙ‡ Ø´Ø¯Ù‡ Ø§Ø³Øª.");
+
+		$c = new Candidate();
+		$c->student_id = $id;
+		$c->description = $request->getParameter("description");
+		$c->poster_file = $id;
+		//$this->getRequest()->moveFile('poster', "images/posters/{$id}.jpg");
+			
+		if ((($_FILES["file"]["type"] == "image/jpeg")
+		|| ($_FILES["file"]["type"] == "image/pjpeg"))){
+			if ($_FILES["file"]["error"] > 0){
+				echo "Return Code: " . $_FILES["file"]["error"] . "<br />";
+			} else {
+				move_uploaded_file($_FILES["file"]["tmp_name"], sfConfig::get('sf_upload_dir')."/images/posters/{$id}.jpg");
+			}
+		} else {
+			$this->errorMsg = "Ù‡Ø´Ø¯Ø§Ø±: ÙØ§ÛŒÙ„ Ø¹Ú©Ø³ ÙØ±Ø³ØªØ§Ø¯Ù‡ Ù†Ø§Ø¯Ø±Ø³Øª Ø§Ø³Øª.";
+		}
+		$c->save();
+	}
+
+	public function executeDelete(sfWebRequest $request){
+		$c_id = $request->getParameter("candidate_id");
+		$prevUni = $request->getParameter("previousUniversity", -1);
+
+		Doctrine_Query::create()
+		->update('vote')
+		->set('candidate_id', '0')
+		->where('candidate_id=?', $c_id)
+		->execute()
+		;
+		
+		Doctrine_Query::create()
+		->delete()
+		->from('candidate')
+		->where("id=?", $c_id)
+		->execute();
+		
+		$this->getRequest()->getParameterHolder()->clear();
+		$this->getRequest()->setParameter('university', $prevUni);
+		$this->forward('candidate', 'index');
+	}
+}

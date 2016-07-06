@@ -1,0 +1,9 @@
+INSERT INTO  `hw3`.`user` (
+`id` ,
+`user_name` ,
+`password` ,
+`credential`
+)
+VALUES (
+NULL ,  'admin',  'rou908' , 'admin'
+);

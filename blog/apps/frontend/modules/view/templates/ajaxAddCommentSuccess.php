@@ -1,0 +1,1 @@
+<?php include_partial('commentShower',array('comment'=>$com) );?>

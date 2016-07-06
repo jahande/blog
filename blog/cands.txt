@@ -1,0 +1,54 @@
+<div class="Body">
+<h1 class="H1">Ù…Ø¯ÛŒØ±ÛŒØª Ù†Ø§Ù…Ø²Ø¯Ù‡Ø§ÛŒ Ø§Ù†ØªØ®Ø§Ø¨Ø§Øª</h1>
+
+<h2>Ù„ÛŒØ³Øª Ù†Ø§Ù…Ø²Ø¯Ù‡Ø§</h2>
+<div class="Box">
+	<div class="Box">
+		<select 
+			onchange="location = '<?php echo url_for("candidate/index") ?>?university='+this.options[this.selectedIndex].value;">
+			<option value="-1" <?php if ($u_id==-1) echo 'selected="selected"'?>>Ù„Ø·ÙØ§ Ø§Ù†ØªØ®Ø§Ø¨ Ú©Ù†ÛŒØ¯.</option>
+			<?php foreach($unis as $u): ?>
+			<?php if ($u->name=="Ù†Ø§Ù…Ø¹Ù„ÙˆÙ…") continue;?>
+			<option value="<?php echo $u->id?>" <?php if ($u_id==$u->id) echo 'selected="selected"'?>><?php echo $u->name?></option>
+			<?php endforeach ?>
+		</select>
+	</div>
+	<div class="Center">
+		<table class="InlineTable" border="1">
+			<tr>
+				<th>Ø±Ø¯ÛŒÙ</th>
+				<th>Ø´Ù…Ø§Ø±Ù‡ Ø¯Ø§Ù†Ø´Ø¬ÙˆÛŒÛŒ</th>
+				<th>Ù†Ø§Ù…</th>
+				<th>Ù†Ø§Ù… Ø®Ø§Ù†ÙˆØ§Ø¯Ú¯ÛŒ</th>
+				<th>Ø§Ø¹Ù…Ø§Ù„</th>
+			</tr>
+			<?php $i = 0?>
+			<?php foreach($cands as $c): ?>
+			<tr>
+				<td class="Number"><?php echo ++$i?></td>
+				<td class="Number"><?php echo $c->Student->student_number?></td>
+				<td><?php echo $c->Student->first_name?></td>
+				<td><?php echo $c->Student->last_name?></td>
+				<td><img src="/images/delete.png" onclick="location='<?php echo url_for("candidate/delete?candidate_id={$c->id}&previousUniversity={$u_id}")?>'" /></td>
+			</tr>
+			<?php endforeach ?>
+			<?php if ($i=0):?>
+			<tr><td colspan="5" style="text-align: center">Ù‡ÛŒÚ† Ù†Ø§Ù…Ø²Ø¯ÛŒ ÙˆØ¬ÙˆØ¯ Ù†Ø¯Ø§Ø±Ø¯.</td></tr>
+			<?php endif ?>
+		</table>
+	</div>
+</div>
+
+<hr/>
+
+<h2>Ø§ÙØ²ÙˆØ¯Ù† Ù†Ø§Ù…Ø²Ø¯</h2>
+<?php echo form_tag('candidate/add', 'multipart=true class=Form'); ?>
+	<label for="student_number">Ø´Ù…Ø§Ø±Ù‡ Ø¯Ø§Ù†Ø´Ø¬ÙˆÛŒÛŒ:</label>
+	<input type="text" name="student_number"/>
+	<br/>
+	<label for="poster">Ù¾ÙˆØ³ØªØ±:</label>
+	<input type="file" name="file" />
+  	<br/>
+  	<input class="SubmitButton" type="submit" value="Ø§ÙØ²ÙˆØ¯Ù†" />
+</form>
+</div>

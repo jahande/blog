@@ -1,0 +1,131 @@
+.postshowers {
+    margin: 1%;
+    padding: 1%;
+    background-color: aqua;
+    border: solid;
+    border-bottom-width: thin;
+}
+.tagsTable{
+	border:groove;
+}
+.like {
+    background: green;
+    width: 30px;
+	text-align:center;
+}
+
+.dislike {
+    background: red;
+    width: 30px;
+	text-align:center;
+}
+
+#mainheader {
+    font-family: "Courier New";
+    font-size: xx-large;
+    font-style: oblique;
+    font-size: 300%;
+    font-weight: 900;
+    margin-top: 80px;
+    height: 100px;
+    color: #0088bb;
+    text-align: center;
+}
+
+.writeComment {
+    margin-top: 3%;
+    border: groove;
+    border: 1px;
+    border-bottom-color: black;
+}
+
+.postshowers_content {
+    background-color: white;
+    border: groove;
+    border-bottom-width: 1px;
+}
+
+.postshowers_title {
+    background-color: #00FF00;
+}
+
+.error_login {
+    color: red;
+    font-size: large;
+}
+
+.success_login {
+    color: green;
+    font-size: large;
+}
+
+.error_logout {
+    color: red;
+    font-size: large;
+}
+
+.success {
+    color: green;
+    font-size: large;
+}
+
+.error {
+    color: red;
+    font-size: large;
+}
+
+.success_logout {
+    color: green;
+    font-size: large;
+}
+
+.layoutTagsShower {
+    position: absolute;
+    right: 5%;
+    top: 350px;
+    width: 13%;
+    border: groove;
+    max-height: 350px;
+}
+
+.layoutTagsShower-content {
+    max-height: 200px;
+    border: groove;
+    overflow-y: scroll;
+    color: orange;
+}
+
+.layoutContent {
+    padding: 3%;
+    position: absolute;
+    left: 20%;
+    width: 55%;
+    border: groove;
+}
+
+.layoutArchive {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 13%;
+    border: groove;
+}
+
+#secondHeader {
+    font-family: "New York";
+    font-size: large;
+    font-size: 150%;
+    font-weight: 200;
+    margin-top: 10px;
+    height: 50px;
+    color: #009944;
+    text-align: center;
+}
+
+#leftsidebar {
+    position: absolute;
+    left: 3%;
+    width: 15%;
+    top: 4%;
+    border: groove;
+}

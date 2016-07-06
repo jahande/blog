@@ -1,0 +1,70 @@
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '4',  'a1',  '2010-12-25 01:22:35',  'ca1'
+);
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '4',  'a2',  '2010-12-25 01:22:35',  'ca2'
+);
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '4',  'a2',  '2010-12-25 01:22:35',  'ca2'
+);
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '4',  'a2',  '2010-12-25 01:22:35',  'c2'
+);
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '4',  'a2',  '2010-12-25 01:22:35',  'ca2'
+);
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '4',  'a2',  '2010-12-25 01:22:35',  'ca2'
+);
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '4',  'a2',  '2010-12-25 01:22:35',  'ca2'
+);

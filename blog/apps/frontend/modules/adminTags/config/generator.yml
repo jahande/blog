@@ -1,0 +1,27 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           tag
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          tag
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields: 
+        display: [  id  ,  name , article_id   ]
+      list:
+        display: [  id  ,  name , article_id   ]
+      filter:  
+        display: [  id  ,  name , article_id   ]
+      form:   
+        display: [  id  ,  name , article_id   ]
+      edit:  
+        display: [  id  ,  name , article_id   ]
+      new:
+        display: [  id  ,  name , article_id   ]

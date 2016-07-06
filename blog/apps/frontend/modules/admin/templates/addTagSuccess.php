@@ -1,0 +1,1 @@
+<div class='success'>action <?php echo $x;?> successfuly finished</div>

@@ -1,0 +1,45 @@
+INSERT INTO  `hw3`.`article` (
+`id` ,
+`title` ,
+`content` ,
+`created_at` 
+)
+VALUES (
+NULL ,  't1',  'c1',  '2010-12-25 01:04:15'
+);
+INSERT INTO  `hw3`.`article` (
+`id` ,
+`title` ,
+`content` ,
+`created_at`
+)
+VALUES (
+NULL,  't2',  'c2',  '2010-12-25 01:04:15'
+);
+INSERT INTO  `hw3`.`article` (
+`id` ,
+`title` ,
+`content` ,
+`created_at`
+)
+VALUES (
+'NULL',  't3',  'c3',  '2010-12-25 01:04:15'
+);
+INSERT INTO  `hw3`.`article` (
+`id` ,
+`title` ,
+`content` ,
+`created_at`
+)
+VALUES (
+NULL ,  't4',  'c4',  '2010-12-25 01:04:15'
+);
+INSERT INTO  `hw3`.`article` (
+`id` ,
+`title` ,
+`content` ,
+`created_at`
+)
+VALUES (
+NULL ,  't4',  'c4',  '2010-12-25 01:04:15'
+);

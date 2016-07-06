@@ -1,0 +1,10 @@
+indexSuccess:
+  metas:
+    title: Last Post View
+editError:
+  metas:
+    title: Error in the profile edition
+all:
+  stylesheets: [my_style]
+  metas:
+    title: My website

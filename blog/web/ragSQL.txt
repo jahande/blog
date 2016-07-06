@@ -1,0 +1,64 @@
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'ds'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'qwew'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'wqe'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'qwe'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'qweq'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'wqq'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '4',  'ds'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '3',  'ds'
+);

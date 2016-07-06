@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Article
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          article
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: 
+        _new: { label: "Create a new article" }
+      fields:
+        id:           { credentials: [admin] }
+        content:  { label: body, help: "The content can be in the Markdown format" }
+      list:
+        max_per_page:   5
+        display: [ title , content , created_at  ]
+      filter:  ~
+      form:
+        fields:
+          created_at: { help: "Date of publication" }
+          title:        { attributes: { style: "width: 350px" } }
+      edit:    
+        display: [ title , content]
+        title: Edit Article %%title%% (%%id%%)
+      new:
+#        created_at:
+#          required: no
+        display: [ title , content]

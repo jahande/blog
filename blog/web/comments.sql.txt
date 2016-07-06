@@ -1,0 +1,50 @@
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '2',  'au1',  '2010-12-25 06:43:48',  'con1'
+);
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '2',  'au2',  '2010-12-25 06:43:48',  'con2'
+);
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '2',  'au3',  '2010-12-25 06:43:48',  'con3'
+);
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '2',  'au2',  '2010-12-25 06:43:48',  'con4'
+);
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '2',  'au5',  '2010-12-25 06:43:48',  'con5'
+);

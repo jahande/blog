@@ -1,0 +1,83 @@
+tag:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                tag
+    module:               adminTags
+    prefix_path:          /adminTags
+    column:               id
+    with_wildcard_routes: true
+
+article:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Article
+    module:               admin
+    prefix_path:          /admin
+    column:               id
+    with_wildcard_routes: true
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+#z:
+#  url:    /view/z
+#  param:  { module: view, action: z}
+#show_comments:
+#  url:    /view/comments/:id
+#  param:  { module: view, action: showComments}
+#  requirements:
+#    id: \d+
+#z:
+#  url:    /view
+#  param:  { module: view, action: index}
+admin_tags:
+  url:    /adminTags
+  param:  { module: adminTags, action: index}
+add_random_article:
+  url:    /admin/addRandomArticle
+  param:  { module: admin, action: addRandomArticle}
+add_comment:
+  url:    /view/addComment/:id
+  param:  { module: view, action: addComment}
+  requirements:
+    id: \d+
+add_ajax_comment:
+  url:    /view/ajaxAddComment/:id
+  param:  { module: view, action: ajaxAddComment}
+  requirements:
+    id: \d+
+show_comments:
+  url:    /view/comments/:id
+  param:  { module: view, action: showComments}
+  requirements:
+    id: \d+
+show_archive:
+  url:    /view/showArchive/:year_month
+  param:  { module: view, action: showArchive}
+#  requirements:
+#    year: \d+
+show_posts_of_tag:
+  url:    /view/tags/:tag_name
+  param:  { module: view, action: showTag}
+#  requirements:
+login_:
+  url:    /login
+  param:  { module: login , action: index }
+login_autheticate:
+  url:    /login/authenticated
+  param:  { module: login , action: authenticate }
+homepage:
+  url:   /
+  param: { module: view, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
+
+

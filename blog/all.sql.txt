@@ -1,0 +1,208 @@
+INSERT INTO  `hw3`.`article` (
+`id` ,
+`title` ,
+`content` ,
+`created_at` 
+)
+VALUES (
+NULL ,  't1',  'c1',  '2010-12-25 01:04:15'
+);
+INSERT INTO  `hw3`.`article` (
+`id` ,
+`title` ,
+`content` ,
+`created_at`
+)
+VALUES (
+NULL,  't2',  'c2',  '2010-12-25 01:04:15'
+);
+INSERT INTO  `hw3`.`article` (
+`id` ,
+`title` ,
+`content` ,
+`created_at`
+)
+VALUES (
+'NULL',  't3',  'c3',  '2010-12-25 01:04:15'
+);
+INSERT INTO  `hw3`.`article` (
+`id` ,
+`title` ,
+`content` ,
+`created_at`
+)
+VALUES (
+NULL ,  't4',  'c4',  '2010-12-25 01:04:15'
+);
+INSERT INTO  `hw3`.`article` (
+`id` ,
+`title` ,
+`content` ,
+`created_at`
+)
+VALUES (
+NULL ,  't4',  'c4',  '2010-12-25 01:04:15'
+);
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '2',  'au1',  '2010-12-25 06:43:48',  'con1'
+);
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '2',  'au2',  '2010-12-25 06:43:48',  'con2'
+);
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '2',  'au3',  '2010-12-25 06:43:48',  'con3'
+);
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '2',  'au2',  '2010-12-25 06:43:48',  'con4'
+);
+INSERT INTO  `hw3`.`comment` (
+`id` ,
+`article_id` ,
+`author` ,
+`created_at` ,
+`content`
+)
+VALUES (
+NULL ,  '2',  'au5',  '2010-12-25 06:43:48',  'con5'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'ds'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'asdas'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'asda'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'sads'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'sada'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'ds'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'nfvnb'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'nbvvb'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'vbnx'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '1',  'hkmb'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '4',  'ds'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '3',  'ds'
+);
+INSERT INTO  `hw3`.`tag` (
+`id` ,
+`article_id` ,
+`name`
+)
+VALUES (
+NULL ,  '2',  'oiut'
+);
+INSERT INTO  `hw3`.`user` (
+`id` ,
+`user_name` ,
+`password` ,
+`credential`
+)
+VALUES (
+NULL ,  'admin',  'rou908' , 'admin'
+);

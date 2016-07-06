@@ -1,0 +1,12 @@
+cerrecting url routing id/12 to /12
+admin for tag 
+component tag +
+tags click -> post +
+component archive +
+component archive links+
+complete actions+
+log in
+author information -> slot
+comments number in admin 
+correcting auto timestamps
+find a way for tags
